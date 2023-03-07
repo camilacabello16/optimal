@@ -34,6 +34,22 @@
           "Microsoft.AspNetCore.App"
         ]
       },
+      "Microsoft.Data.Sqlite.Core/7.0.3": {
+        "type": "package",
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.1.4"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.Data.Sqlite.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
         "type": "package",
         "build": {
@@ -129,6 +145,18 @@
           }
         }
       },
+      "SQLitePCLRaw.core/2.1.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {}
+        }
+      },
       "Swashbuckle.AspNetCore/6.4.0": {
         "type": "package",
         "dependencies": {
@@ -220,6 +248,15 @@
           }
         }
       },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.1/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/_._": {}
+        }
+      },
       "System.Security.AccessControl/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -300,6 +337,22 @@
         "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
         "microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
+      ]
+    },
+    "Microsoft.Data.Sqlite.Core/7.0.3": {
+      "sha512": "pCmzLLWTIrIv94o7JtQ1qcPD0oc1YNY9XvlO6/tOF9YCcUfDZ3Tx9Z//CM7hFnprduHFPekif7jteBc/sXQ31Q==",
+      "type": "package",
+      "path": "microsoft.data.sqlite.core/7.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.Data.Sqlite.dll",
+        "lib/net6.0/Microsoft.Data.Sqlite.xml",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.dll",
+        "lib/netstandard2.0/Microsoft.Data.Sqlite.xml",
+        "microsoft.data.sqlite.core.7.0.3.nupkg.sha512",
+        "microsoft.data.sqlite.core.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -674,6 +727,18 @@
         "version.txt"
       ]
     },
+    "SQLitePCLRaw.core/2.1.4": {
+      "sha512": "inBjvSHo9UDKneGNzfUfDjK08JzlcIhn1+SP5Y3m6cgXpCxXKCJDy6Mka7LpgSV+UZmKSnC8rTwB0SQ0xKu5pA==",
+      "type": "package",
+      "path": "sqlitepclraw.core/2.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/SQLitePCLRaw.core.dll",
+        "sqlitepclraw.core.2.1.4.nupkg.sha512",
+        "sqlitepclraw.core.nuspec"
+      ]
+    },
     "Swashbuckle.AspNetCore/6.4.0": {
       "sha512": "eUBr4TW0up6oKDA5Xwkul289uqSMgY0xGN4pnbOIBqCcN9VKGGaPvHX3vWaG/hvocfGDP+MGzMA0bBBKz2fkmQ==",
       "type": "package",
@@ -841,6 +906,27 @@
         "version.txt"
       ]
     },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Security.AccessControl/4.7.0": {
       "sha512": "JECvTt5aFF3WT3gHpfofL2MNNP6v84sxtXxpqhLBCcDRzqsPBmHhQ6shv4DwwN2tRlzsUxtb3G9M3763rbXKDg==",
       "type": "package",
@@ -946,24 +1032,30 @@
     "net7.0": [
       "Dapper >= 2.0.123",
       "Microsoft.AspNetCore.OpenApi >= 7.0.2",
+      "Microsoft.Data.Sqlite.Core >= 7.0.3",
       "Swashbuckle.AspNetCore >= 6.4.0",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\buidu\\.nuget\\packages\\": {}
+    "C:\\Users\\buidu\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
+      "projectUniqueName": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
       "projectName": "OptimalPerforment",
-      "projectPath": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
+      "projectPath": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
       "packagesPath": "C:\\Users\\buidu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\obj\\",
+      "outputPath": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\buidu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -971,6 +1063,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -996,6 +1089,10 @@
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[7.0.2, )"
+          },
+          "Microsoft.Data.Sqlite.Core": {
+            "target": "Package",
+            "version": "[7.0.3, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

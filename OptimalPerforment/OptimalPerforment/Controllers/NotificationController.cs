@@ -25,9 +25,23 @@ namespace OptimalPerforment.Controllers
             //    var data = await connection.QueryAsync<Notification>(sql, buffered: false);
 
             //}
-            using IDbConnection connection = new SqlConnection(ConnectionString);
+            int batchSize = 100000;
+            int offset = 0;
+            SqlConnection connection = new SqlConnection(ConnectionString);
+            while (true)
+            {
+                string query = $"SELECT * FROM Notification ORDER BY ID OFFSET {offset} ROWS FETCH NEXT {batchSize} ROWS ONLY";
+                var customers = connection.Query<Notification>(query);
 
-            var result = await connection.QueryAsync<Notification>(sql);
+                if (!customers.Any())
+                {
+                    break;
+                }
+
+                // Insert the batch of data into the database using SqlBulkCopy
+
+                offset += batchSize;
+            }
 
             return 1;
         }
