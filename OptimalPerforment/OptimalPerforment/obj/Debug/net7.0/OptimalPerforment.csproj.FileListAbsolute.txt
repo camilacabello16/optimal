@@ -80,3 +80,5 @@ D:\optimal query\optimal\OptimalPerforment\OptimalPerforment\obj\Debug\net7.0\re
 D:\optimal query\optimal\OptimalPerforment\OptimalPerforment\obj\Debug\net7.0\OptimalPerforment.pdb
 D:\optimal query\optimal\OptimalPerforment\OptimalPerforment\obj\Debug\net7.0\OptimalPerforment.genruntimeconfig.cache
 D:\optimal query\optimal\OptimalPerforment\OptimalPerforment\obj\Debug\net7.0\ref\OptimalPerforment.dll
+C:\Users\buidu\ảnh nóng\optimal-perform\OptimalPerforment\OptimalPerforment\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Users\buidu\ảnh nóng\optimal-perform\OptimalPerforment\OptimalPerforment\bin\Debug\net7.0\SQLitePCLRaw.core.dll

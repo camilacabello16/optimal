@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F6WfXr6Tq8sUPKkSUehLleYEMBp5snK47Fyx+zcvdqX+fBcTl4aH7wmYaL2Ql8k7NC3ywAB3oDmaSN3T8wLXLQ==",
+  "dgSpecHash": "s2ZRkvTMW7/Kwe1fpNkWxzppbDpel6tOv3DXzgsuauw5EFM7OTy7B7X3TqUJidFm8v5wrh7oyOOipX9S/aLRBA==",
   "success": true,
-  "projectFilePath": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
+  "projectFilePath": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\buidu\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\buidu\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.2\\microsoft.aspnetcore.openapi.7.0.2.nupkg.sha512",

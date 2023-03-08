@@ -16,31 +16,14 @@ namespace OptimalPerforment.Controllers
             string sql = "SELECT * FROM Notification";
 
             // Create a new SqlConnection object
-            //using (SqlConnection connection = new SqlConnection(ConnectionString))
-            //{
-            //    // Open the connection
-            //    await connection.OpenAsync();
-
-            //    // Execute the query and return the results
-            //    var data = await connection.QueryAsync<Notification>(sql, buffered: false);
-
-            //}
-            int batchSize = 100000;
-            int offset = 0;
-            SqlConnection connection = new SqlConnection(ConnectionString);
-            while (true)
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
             {
-                string query = $"SELECT * FROM Notification ORDER BY ID OFFSET {offset} ROWS FETCH NEXT {batchSize} ROWS ONLY";
-                var customers = connection.Query<Notification>(query);
+                // Open the connection
+                await connection.OpenAsync();
 
-                if (!customers.Any())
-                {
-                    break;
-                }
+                // Execute the query and return the results
+                var data = await connection.QueryAsync<Notification>(sql);
 
-                // Insert the batch of data into the database using SqlBulkCopy
-
-                offset += batchSize;
             }
 
             return 1;

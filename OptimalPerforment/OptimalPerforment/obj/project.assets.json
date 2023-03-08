@@ -1038,24 +1038,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\buidu\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\buidu\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
+      "projectUniqueName": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
       "projectName": "OptimalPerforment",
-      "projectPath": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
+      "projectPath": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\OptimalPerforment.csproj",
       "packagesPath": "C:\\Users\\buidu\\.nuget\\packages\\",
-      "outputPath": "D:\\optimal query\\optimal\\OptimalPerforment\\OptimalPerforment\\obj\\",
+      "outputPath": "C:\\Users\\buidu\\ảnh nóng\\optimal-perform\\OptimalPerforment\\OptimalPerforment\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\buidu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1063,7 +1058,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
