@@ -18,30 +18,30 @@ namespace OptimalPerforment.Controllers
         [HttpGet]
         public async Task<int> Get()
         {
-            SqlConnection connection = new SqlConnection(ConnectionString);
-            string sql = "SELECT * FROM Notification";
-            SqlCommand command = new SqlCommand(sql, connection);
+            //SqlConnection connection = new SqlConnection(ConnectionString);
+            //string sql = "SELECT * FROM Notification";
+            //SqlCommand command = new SqlCommand(sql, connection);
 
-            connection.Open();
-            SqlDataReader reader = command.ExecuteReader();
-            var listData = new List<Notification>();
-            while (reader.Read())
-            {
-                // retrieve data from the reader
-                var data = new Notification
-                {
-                    ID = reader.GetInt32(0),
-                    Subject = reader.GetString(1),
-                    Message = reader.GetString(2),
-                    CreatedDate = reader.GetDateTime(3),
-                };
-                listData.Add(data);
+            //connection.Open();
+            //SqlDataReader reader = command.ExecuteReader();
+            //var listData = new List<Notification>();
+            //while (reader.Read())
+            //{
+            //    // retrieve data from the reader
+            //    var data = new Notification
+            //    {
+            //        ID = reader.GetInt32(0),
+            //        Subject = reader.GetString(1),
+            //        Message = reader.GetString(2),
+            //        CreatedDate = reader.GetDateTime(3),
+            //    };
+            //    listData.Add(data);
 
-                // process the data
-                // ...
-            }
-            reader.Close();
-            connection.Close();
+            //    // process the data
+            //    // ...
+            //}
+            //reader.Close();
+            //connection.Close();
 
             return 1;
         }

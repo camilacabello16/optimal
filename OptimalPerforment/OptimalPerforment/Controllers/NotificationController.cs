@@ -2,10 +2,12 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using System.Data.SqlClient;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Xml.Linq;
 
 namespace OptimalPerforment.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class NotificationController : ControllerBase
     {
@@ -28,6 +30,36 @@ namespace OptimalPerforment.Controllers
 
             return 1;
         }
+
+        [HttpGet]
+        public async Task<int> Insert()
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.Columns.Add("Subject", typeof(string));
+            dataTable.Columns.Add("Message", typeof(string));
+            dataTable.Columns.Add("CreatedDate", typeof(DateTime));
+
+            for (int i = 0; i < 1000000; i++)
+            {
+                dataTable.Rows.Add("Test " + i.ToString(), "abc" + i.ToString(), DateTime.Now);
+            }
+
+            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            {
+                connection.Open();
+
+                using (SqlBulkCopy bulkCopy = new SqlBulkCopy(connection))
+                {
+                    bulkCopy.DestinationTableName = "Notification";
+                    bulkCopy.BatchSize = 10000;
+                    bulkCopy.BulkCopyTimeout = 3600;
+
+                    bulkCopy.WriteToServer(dataTable);
+                }
+            }
+
+            return 1;
+        }
     }
 
     public class Notification
@@ -36,5 +68,13 @@ namespace OptimalPerforment.Controllers
         public string Subject { get; set; }
         public string Message { get; set; }
         public DateTime CreatedDate { get; set; }
+
+        //public Notification(int id, string subject, string msg, DateTime date)
+        //{
+        //    ID = id;
+        //    Subject = subject;
+        //    Message = msg;
+        //    CreatedDate = date;
+        //}
     }
 }
